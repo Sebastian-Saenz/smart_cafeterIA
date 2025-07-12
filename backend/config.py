@@ -25,3 +25,5 @@ class Config:
     CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secret.json')
     JWT_SECRET_KEY = "secret"
     SECRET_KEY = "secret"
+
+    

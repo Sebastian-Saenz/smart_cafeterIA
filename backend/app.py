@@ -23,7 +23,7 @@ def create_app():
 
     app.config.update(
         {
-            "CLIENT_SECRETS_FILE": "client_secret.json",  # JSON descargado de GCP
+            "CLIENT_SECRETS_FILE": os.path.join("backend", "client_secret.json"),  # JSON descargado de GCP
             "SCOPES": [
                 "openid",
                 "https://www.googleapis.com/auth/userinfo.email",
