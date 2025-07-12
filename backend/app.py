@@ -17,13 +17,15 @@ def create_app():
         template_folder="../frontend/templates",
         static_folder="../frontend/static",
     )
-    app.secret_key = app.config["SECRET_KEY"] 
+    app.secret_key = app.config["SECRET_KEY"]
     jwt = JWTManager(app)
     app.config.from_object(Config)
 
     app.config.update(
         {
-            "CLIENT_SECRETS_FILE": os.path.join("backend", "client_secret.json"),  # JSON descargado de GCP
+            "CLIENT_SECRETS_FILE": os.path.join(
+                "backend", "client_secret.json"
+            ),  # JSON descargado de GCP
             "SCOPES": [
                 "openid",
                 "https://www.googleapis.com/auth/userinfo.email",
@@ -44,8 +46,10 @@ def create_app():
     # Context processor para inyectar user en templates
     @app.context_processor
     def inject_user():
-        user=session.get("user")
-        email = user.get("email")
+        user = session.get("user")
+        email = None
+        if user:
+            email = user.get("email")
         return dict(user=user, user_email=email)
 
     return app

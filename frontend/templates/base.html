@@ -47,39 +47,39 @@
     {% include "navbar.html" %}
     {% block content %}{% endblock %}
 
-<!-- Footer Start -->
-<div class="container-fluid footer bg-light">
-  <div class="container text-center py-5">
-      <div class="row">
-          <div class="col-12 mb-4">
-              <a href="index.html" class="navbar-brand m-0">
-                  <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">ESENCIA</span></h1>
-              </a>
-          </div>
-          <div class="col-12 mb-4">
-              <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-          <div class="col-12 mt-2 mb-4">
-              <div class="row">
-                  <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                      <h5 class="font-weight-bold mb-2">Visitanos</h5>
-                      <p class="mb-2">123 Calle, Lima, Peru</p>
-                      <p class="mb-0">+51 946885555</p>
-                  </div>
-                  <div class="col-sm-6 text-center text-sm-left">
-                      <h5 class="font-weight-bold mb-2">Horarios de atención</h5>
-                      <p class="mb-2">Lunes a Domingo: 14:00 - 21:30</p>
-                      <p class="mb-0">Feriados: Cerrado</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">ESENCIA</span></h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Visitanos</h5>
+                            <p class="mb-2">123 Calle, Lima, Peru</p>
+                            <p class="mb-0">+51 946885555</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Horarios de atención</h5>
+                            <p class="mb-2">Lunes a Domingo: 14:00 - 21:30</p>
+                            <p class="mb-0">Feriados: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
@@ -94,24 +94,8 @@
     <script src="{{ url_for('static', filename='mail/jqBootstrapValidation.min.js') }}"></script>
     <script src="{{ url_for('static', filename='mail/contact.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script>
-        function oauthSignIn() {
-          const params = {
-            client_id: '401510539727-kmju5p4gsbitskfkvu6q4cmr2a0ht3ng.apps.googleusercontent.com',
-            redirect_uri: 'https://8080-cs-6d82139e-bba8-403a-8cef-00afd4e3f4ac.cs-us-east1-pkhd.cloudshell.dev/auth/callback',
-            response_type: 'code',
-            scope: 'openid email profile',
-            include_granted_scopes: 'true',
-            state: 'random_' + Math.random().toString(36).substr(2)
-          };
-          // Guarda el state para verificar luego
-          localStorage.setItem('oauth_state', params.state);
-          const url = 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams(params);
-          window.location = url;
-        }
-      </script>
-      
-
+    <script src="{{ url_for('static', filename='js/oauthSignIn.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app-conversacional.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>
 
