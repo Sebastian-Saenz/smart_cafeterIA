@@ -44,7 +44,9 @@ def create_app():
     # Context processor para inyectar user en templates
     @app.context_processor
     def inject_user():
-        return dict(user=session.get("user"))
+        user=session.get("user")
+        email = user.get("email")
+        return dict(user=user, user_email=email)
 
     return app
 

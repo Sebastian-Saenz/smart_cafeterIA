@@ -6,8 +6,6 @@ from .store import store_stock
 
 config = Config()
 
-print(f"[Tool Recommendario]")
-
 @tool
 def get_recommendation(out_of_stock: List[str]) -> str:
     """Sugiere o recomienda alternativas para productos sin stock basadas en la misma categoría"""
