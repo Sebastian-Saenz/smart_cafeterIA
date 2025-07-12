@@ -1,0 +1,16 @@
+id,name,category,description,price,stock
+1,Cheesecake de Fresa,postre,"Porcion cremosa de tarta de queso con coulis de fresa",5.50,12
+2,Torta de Chocolate,postre,"Delicioso bizcocho de cacao intenso con cobertura ganache",13.00,3
+3,Brownie de Chocolate,postre,"Brownie denso con trozos de chocolate semi-amargo",4.00,20
+4,Pie de Limon,postre,"Base crujiente con crema de limon y merengue dorado",4.75,8
+5,Empanadas de Pollo,acompañamiento salado,"Masa hojaldrada rellena de pollo y verduras",3.25,25
+6,Empanadas de Carne,acompañamiento salado,"Masa hojaldrada rellena de Carne",4.50,10
+7,Pan de Ajo,acompañamiento salado,"Pan artesanal cubierto de mantequilla de ajo y especias",2.00,30
+9,Americano,bebida caliente,"Cafe negro largo preparado con granos 100% arabica",3.50,20
+10,Latte,bebida caliente,"Cafe expreso con leche vaporizada y fina capa de espuma",4.50,15
+11,Cappuccino,bebida caliente,"Espresso, leche espumada y cacao espolvoreado",4.75,10
+12,Chocolate Caliente,bebida caliente,"Bebida espesa de chocolate con crema batida",3.00,12
+13,Frappe de Vainilla,bebida fria,"Bebida fria de cafe, vainilla y hielos triturados",5.00,14
+14,Te Helado de Durazno,bebida fria,"Te negro infusionado con durazno y hielo",3.25,20
+15,Smoothie de Fresa,bebida fria,"Mezcla de fresas frescas, yogur y hielo",4.25,16
+16,Limonada con Hierbabuena,bebida fria,"Refrescante limonada natural con hojas de hierbabuena",3.00,22
